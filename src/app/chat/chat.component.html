@@ -1,0 +1,47 @@
+<header>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">WebSocket Chat App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarsExample01">
+        <ul class="navbar-nav mr-auto">
+    
+        </ul>
+    
+      </div>
+    </nav>
+  </header>
+  
+  <main class="chat">
+    <div class="container">
+      <div class="chat-content">
+        <div class="card">
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item" *ngFor="let chatMsg of webSocketService.chatMsgs">
+                  <strong>{{ chatMsg.user}}:</strong>
+                  <span>{{ chatMsg.msg}}</span>
+              </li>
+          </ul>
+        </div>
+      </div>
+
+      <form (ngSubmit)="sendMsg(sendForm)" #sendForm="ngForm">
+          <div class="chat-send row">
+            <div class="col-2">
+                <input type="text" ngModel class="form-control" name="user" id="input-user">
+              </div>
+    
+              <div class="col-8">
+                <input type="text" ngModel class="form-control" name="msg" id="input-msg">
+            </div>
+    
+            <div class="col-2">
+                  <button tyep="submit" class="btn btn-primary">Send</button>
+            </div>
+          </div>
+
+      </form>
+    </div>
+  </main>
