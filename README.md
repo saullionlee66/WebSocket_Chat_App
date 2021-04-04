@@ -1,6 +1,8 @@
-# Backend
+# Getting Started
 
-## ws-chat-server
+## Backend
+
+### ws-chat-server
 
 (Node.js installed is required)
 
@@ -11,6 +13,7 @@
 
 ## ws-chat
 
+npm i
 ng serve -o
 
 # Tech Spec
