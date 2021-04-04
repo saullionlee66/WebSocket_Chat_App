@@ -16,6 +16,13 @@
 npm i
 ng serve -o
 
-# Tech Spec
+## About this project
+A real-time Websocket protocol communication app 
 
-A real-time Websocket protocol communication app with an Angular framework webpage, including Bootstrap and JQuery. A Node.js/Express server provided.
+## Built With
+
+1. Angular
+2. Bootstrap
+3. JQuery
+4. Node.js/Express
+5. WebSocket
